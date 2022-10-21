@@ -1,41 +1,18 @@
-import math
-def area_circulo():
-  radio=float(input("El radio del circulo: "))
-  if radio<0:
-    radio=float(input("Vuelve a introducir el radio del circulo: "))
-  area=(radio*radio)*(math.pi)
-  print("Area de este circullo es de ", round(area,2))
-area_circulo()
-
-
-def imc():
-  peso=float(input("¿Cuanto peso?: "))
-  altura=float(input("¿Cuanto mides?: "))
-  IMC=peso/(altura*altura)
-  if IMC<18.50:
-    print("Estas en bajo peso")
-  elif 18.50<=IMC<25.00:
-    print("Estas en normalidad")
-  elif IMC>=25.00:
-    print("Estas en sobrepeso")
-  else:
-    print("Estas en obesidad")
-  print(IMC)
-imc()
-
 
 def lee_numero():
-  primer_numero=float(input("Introduce un número cualquiera: "  ))
-  segundo_numero=float(input("Introduce un número cualquiera: "  ))
-  tercer_numero=float(input("Introduce un número cualquiera: "  ))
-  return primer_numero,segundo_numero,tercer_numero 
-lee_numero()
-
+  return float(input("Introduce un número: "))
 def mayor(primer_numero,segundo_numero,tercer_numero):
-  print(max(mayor))
-
-mayor(primer_numero,segundo_numero,tercer_numero)
-
+  if primer_numero> segundo_numero and segundo_numero>tercer_numero:
+    return primer_numero
+  elif segundo_numero>tercer_numero:
+    return segundo_numero
+  else:
+    return tercer_numero
+valores=[]
+for i in range(3):
+  valores.append(lee_numero())
+print("El número mayor es {}".format(mayor(valores[0],valores[1],valores[2])))
+    
 
 
 
